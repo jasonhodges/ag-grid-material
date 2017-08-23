@@ -28,3 +28,13 @@ $ag-mat-accent: mat-color($accent);
 
 // Import the ag-Grid material-next theme
 @import '~ag-grid/src/styles/theme-material-next';
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#grid-container {
+    width: 80%;
+    margin: 24px;
+}

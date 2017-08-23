@@ -1,0 +1,5 @@
+<md-select #select (close)="transferValue()">
+  <md-option *ngFor="let item of items" [value]="item">
+    {{ item }}
+  </md-option>
+</md-select>
