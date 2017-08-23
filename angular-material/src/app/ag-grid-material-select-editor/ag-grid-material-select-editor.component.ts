@@ -9,10 +9,11 @@ import { MdSelect } from "@angular/material";
   styleUrls: ['./ag-grid-material-select-editor.component.scss']
 })
 export class AgGridMaterialSelectEditorComponent implements OnInit, AgEditorComponent {
+    columnWidth: string;
+    values: [ string ];
+    params: ICellEditorParams;
     private value: string;
     @ViewChild('select', {read: MdSelect}) select: MdSelect;
-
-    private items: [ string ] = [ "Toyota", "Ford", "Porche" ];
 
     constructor() { }
 
@@ -23,7 +24,7 @@ export class AgGridMaterialSelectEditorComponent implements OnInit, AgEditorComp
     }
 
     isPopup(): boolean {
-        return false;
+        return true;
     }
 
     isCancelBeforeStart(): boolean {
@@ -34,15 +35,10 @@ export class AgGridMaterialSelectEditorComponent implements OnInit, AgEditorComp
         return false;
     }
 
-    focusIn(): void {
-        //
-    }
-
-    focusOut(): void {
-        // 
-    }
-
-    agInit(params: ICellEditorParams): void {
+    agInit(params: any): void {
+        this.params = params;
+        this.columnWidth = params.column.actualWidth + "px";
+        this.values = params.values;
         this.value = params.value;
     }
 
@@ -50,8 +46,8 @@ export class AgGridMaterialSelectEditorComponent implements OnInit, AgEditorComp
         return this.value;
     }
 
-    transferValue(): void {
-        console.log('test')
+    onSelectChange(e): void {
+        this.params.stopEditing();
     }
 
 }

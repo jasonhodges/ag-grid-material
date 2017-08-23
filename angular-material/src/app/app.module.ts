@@ -8,17 +8,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // material components
-import {MdIconModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdToolbarModule, MdCardModule, MdSelectModule} from '@angular/material';
+import {MdIconModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdToolbarModule, MdCardModule, MdSelectModule, MdDatepickerModule, MdNativeDateModule} from '@angular/material';
 
 import {AgGridModule} from "ag-grid-angular/main";
 import { AgGridMaterialTextEditorComponent } from './ag-grid-material-text-editor/ag-grid-material-text-editor.component';
 import { AgGridMaterialSelectEditorComponent } from './ag-grid-material-select-editor/ag-grid-material-select-editor.component';
+import { AgGridMaterialCheckboxCellComponent } from './ag-grid-material-checkbox-cell/ag-grid-material-checkbox-cell.component';
+import { AgGridMaterialDatepickerEditorComponent } from './ag-grid-material-datepicker-editor/ag-grid-material-datepicker-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AgGridMaterialTextEditorComponent,
-    AgGridMaterialSelectEditorComponent
+    AgGridMaterialSelectEditorComponent,
+    AgGridMaterialCheckboxCellComponent,
+    AgGridMaterialDatepickerEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +36,13 @@ import { AgGridMaterialSelectEditorComponent } from './ag-grid-material-select-e
     MdToolbarModule,
     MdCardModule,
     MdSelectModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
     AgGridModule.withComponents([
         AgGridMaterialTextEditorComponent,
-        AgGridMaterialSelectEditorComponent
+        AgGridMaterialSelectEditorComponent,
+        AgGridMaterialCheckboxCellComponent,
+        AgGridMaterialDatepickerEditorComponent
     ])
   ],
   providers: [],

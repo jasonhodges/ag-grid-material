@@ -1,5 +1,5 @@
-<md-select #select (close)="transferValue()">
-  <md-option *ngFor="let item of items" [value]="item">
+<md-select #select (change)="onSelectChange($event)" [(ngModel)]="value" [style.width]="columnWidth">
+  <md-option *ngFor="let item of values" [value]="item">
     {{ item }}
   </md-option>
 </md-select>

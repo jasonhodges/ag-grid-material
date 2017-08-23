@@ -9,6 +9,7 @@ import { MdInputDirective } from "@angular/material";
   styleUrls: ['./ag-grid-material-text-editor.component.scss']
 })
 export class AgGridMaterialTextEditorComponent implements OnInit, AgEditorComponent {
+    params: ICellEditorParams;
     private value: string;
     @ViewChild('input', {read: MdInputDirective}) input;
 
@@ -41,11 +42,16 @@ export class AgGridMaterialTextEditorComponent implements OnInit, AgEditorCompon
     }
 
     agInit(params: ICellEditorParams): void {
+        this.params = params;
         this.value = params.value;
     }
 
     getValue(): string {
         return this.value;
+    }
+
+    onBlur(): void {
+        this.params.stopEditing();
     }
 
 }
