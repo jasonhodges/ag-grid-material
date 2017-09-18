@@ -42,7 +42,9 @@ export class AppComponent {
                 editable: true, 
                 cellEditorFramework: AgGridMaterialTextEditorComponent 
             },
-            {headerName: "Price", field: "price"},
+            {   headerName: "Price", 
+                field: "price"
+            },
             {
                 headerName: "Made on", 
                 field: "madeOn", 
