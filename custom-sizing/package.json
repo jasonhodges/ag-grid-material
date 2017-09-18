@@ -1,0 +1,30 @@
+{
+  "name": "lite-ag",
+  "version": "12.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ag-grid": "13.1.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "css-loader": "0.28.4",
+    "file-loader": "^0.11.2",
+    "loader-utils": "^1.1.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-scss": "^1.0.2",
+    "resolve-url-loader": "^2.1.0",
+    "style-loader": "0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "3.6.0",
+    "webpack-dev-server": "2.8.2"
+  }
+}

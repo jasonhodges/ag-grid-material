@@ -1,0 +1,12 @@
+$ag-icons-path: '~ag-grid/src/styles/icons/';
+$ag-mat-icons-path: '~ag-grid/src/styles/material-icons/';
+
+$ag-mat-grid-size: 4px; // 8 by default
+$ag-mat-icon-size: 12px; // 18 by default
+
+// Change the primary / accent colors
+$ag-mat-primary: #1976D2;
+$ag-mat-accent: #FBC02D;
+
+@import "~ag-grid/src/styles/ag-grid.scss";
+@import "~ag-grid/src/styles/ag-theme-material.scss";
