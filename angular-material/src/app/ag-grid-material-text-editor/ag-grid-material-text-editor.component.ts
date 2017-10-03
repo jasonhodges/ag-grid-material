@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { IAfterGuiAttachedParams, ICellEditorParams } from "ag-grid/main";
 import { AgEditorComponent, } from "ag-grid-angular";
-import { MdInputDirective } from "@angular/material";
+import { MdInput } from "@angular/material";
 
 @Component({
   selector: 'app-ag-grid-material-text-editor',
@@ -11,7 +11,7 @@ import { MdInputDirective } from "@angular/material";
 export class AgGridMaterialTextEditorComponent implements OnInit, AgEditorComponent {
     params: ICellEditorParams;
     private value: string;
-    @ViewChild('input', {read: MdInputDirective}) input;
+    @ViewChild('input', {read: MdInput}) input;
 
     constructor() { }
 

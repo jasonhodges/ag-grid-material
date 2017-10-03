@@ -15,6 +15,7 @@ export class AppComponent {
     title = 'app';
 
     private gridOptions:GridOptions = <GridOptions>{
+        enableSorting: true,
         rowSelection: 'multiple',
         suppressRowClickSelection: true
     };

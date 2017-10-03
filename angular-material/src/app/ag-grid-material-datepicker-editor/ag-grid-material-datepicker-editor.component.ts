@@ -1,14 +1,14 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { IAfterGuiAttachedParams, ICellEditorParams } from "ag-grid/main";
 import { AgEditorComponent, } from "ag-grid-angular";
-import { MdDatepicker } from "@angular/material";
+import { MdDatepicker, MdDatepickerToggle } from "@angular/material";
 
 @Component({
   selector: 'app-ag-grid-material-datepicker-editor',
   template: `
     <md-input-container>
       <input mdInput [mdDatepicker]="picker" [(ngModel)]="value">
-      <button mdSuffix [mdDatepickerToggle]="picker"></button>
+      <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
     </md-input-container>
     <md-datepicker #picker (selectedChanged)="onSelectChange(e)"></md-datepicker>
   `, 
